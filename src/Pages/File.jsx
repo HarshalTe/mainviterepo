@@ -26,13 +26,13 @@ const File = () => {
     return (
         <div>
             <h1>DOC</h1>
-            <input type="file" name="d1oc1" multiple onChange={ch} />
+            <input type="file" name="doc1" multiple onChange={ch} />
             <br />
-            <input type="file" name="d2oc2" multiple onChange={ch} />
+            <input type="file" name="doc2" multiple onChange={ch} />
             <br />
-            <input type="file" name="doc13" multiple onChange={ch} />
+            <input type="file" name="doc3" multiple onChange={ch} />
             <br />
-            <input type="file" name="do1c4" multiple onChange={ch} />
+            <input type="file" name="doc4" multiple onChange={ch} />
             <br />
             <button onClick={add}>ADD</button>
             {

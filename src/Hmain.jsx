@@ -10,6 +10,8 @@ import Array1 from './Pages/Array1';
 import ScrollExample from './Pages/ScrollExample';
 import AllInputComponent from './Pages/AllInputComponent';
 import Rev from './Pages/Rev';
+import FileComponent from './Pages/FileComponent';
+import File from './Pages/File';
 
 
 
@@ -22,7 +24,9 @@ const Hmain = ()=>{
             {/* <Snow/> */}
             {/* <WorkUserDropdown/> */}
             {/* <MultipleCheckbox/> */}
-            <Rev/>
+            {/* <Rev/> */}
+            {/* <FileComponent/> */}
+            <File/>
             {/* <Array1/> */}
             {/* <ScrollExample/> */}
             {/* <AllInputComponent/> */}

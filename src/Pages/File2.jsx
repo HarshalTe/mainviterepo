@@ -1,51 +1,44 @@
-import { ReducerType } from "@reduxjs/toolkit";
 import { useState } from "react";
 
 const File2 = ()=>{
-       const [userdata,setuserdata] = useState({
-           hobbies:[],
-           clr:[]   
-       })
-       const [alldata,setalldata] = useState([]);
-       const change = (e)=>{
-           const {checked,value,name} = e.target;
-           if(checked){
-               setuserdata({...userdata,[name]:value})
-           }
-           else{
-                   setuserdata(userdata.filter((dd,ddi)=>{
-                       return dd !== value
-                   }))
-           }
-       }
-       const add = ()=>{
-           setalldata([...alldata,{...userdata}]) 
+       const [userdata,setuserdata] = useState(
+        {
+            file1:[],
+            file2:[],
+            hobbies:[],
+            clr:[]
+        }
+       );
+       const chnage = (e)=>{
+
        }
     return(
         <div>
-            {["coding","digital-art","drawing"].map((d,di)=>{
-                  return(
-                    <div key={di}>
-                        <label>{d}</label>
-                         <input type="checkbox" name="hobbies" checked ={userdata.hobbies.includes(d)} onChange={change}  value={d}/>
-                         
-                    </div>
-                  );
-            })}
-                 {["red","yellow","green"].map((cd,cdi)=>{
-                  return(
-                    <div key={cdi}>
-                        <label>{cd}</label>
-                         <input type="checkbox" name="clr" checked ={userdata.clr.includes(cd)} onChange={change}  value={cd}/>
-                         
-                    </div>
-                  );
-            })}
-            <button onClick={add}>ADD</button>
+            <input type="file" name="file1" onChange={chnage}/>
             <br/>
-         
-               
+            <input type="file" name="file2"  onChange={chnage}/>
+            <br/>
+            {["coding","digital-art","drawing"].map((h,hi)=>{
+                 return(
+                    <div key={hi}>
+                        <label>{h}</label>
+                        <input type="checkbox" checked={userdata.includes(h)} name="hobbies" value={userdata.hobbies} onChange={chnage}/>
+                    </div>
+                 );
+            })}
+            <br/>
+               {["red","yellow","green"].map((c,ci)=>{
+                 return(
+                    <div key={ci}>
+                        <label>{c}</label>
+                        <input type="checkbox" checked={userdata.includes(c)} name="clr" value={userdata.clr} onChange={chnage}/>
+                    </div>
+                 );
+            })}
+
+
+
         </div>
     );
 }
-export default File2;
+export default File2

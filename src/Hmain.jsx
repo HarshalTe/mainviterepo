@@ -13,18 +13,22 @@ import Rev from './Pages/Rev';
 import FileComponent from './Pages/FileComponent';
 import File from './Pages/File';
 import File2 from './Pages/File2';
+import MultiArrayForm from './Pages/MultiArrayForm';
+import Full from './Pages/Full';
 
 
 
 const Hmain = ()=>{
     return(
         <div>
+              <MultiArrayForm/>
+              <Full/>
             {/* <Newcrud/> */}
               {/* <Arrayexample/> */}
             {/* <C1/> */}
             {/* <Snow/> */}
             {/* <WorkUserDropdown/> */}
-            <MultipleCheckbox/>
+            {/* <MultipleCheckbox/> */}
             {/* <Rev/> */}
             {/* <FileComponent/> */}
             {/* <File/> */}

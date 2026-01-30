@@ -12,7 +12,7 @@ const Newcrud = () => {
       setuserdata({...userdata,[e.target.name]:e.target.value})
     }
     const create = (e)=>{
-       
+        
       dispatch(add(userdata))
       setuserdata({first:"",last:""})
     }

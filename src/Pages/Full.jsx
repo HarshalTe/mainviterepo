@@ -26,7 +26,7 @@ const Full = () => {
           : prev[name].filter(item => item !== value)
       }));
     } else if (type === "radio") {
-      setForm(prev => ({
+      setForm(prev => ({   
         ...prev,
         [name]: value
       }));

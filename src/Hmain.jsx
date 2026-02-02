@@ -15,14 +15,18 @@ import File from './Pages/File';
 import File2 from './Pages/File2';
 import MultiArrayForm from './Pages/MultiArrayForm';
 import Full from './Pages/Full';
+import MultipleCheckboxFormik from './Pages/MultipleCheckboxFormik';
+import Again from './Pages/Again';
 
 
 
 const Hmain = ()=>{
     return(
         <div>
-              <MultiArrayForm/>
-              <Full/>
+              {/* <MultiArrayForm/>
+              <Full/> */}
+              <Again/>
+              {/* <MultipleCheckboxFormik/> */}
             {/* <Newcrud/> */}
               {/* <Arrayexample/> */}
             {/* <C1/> */}

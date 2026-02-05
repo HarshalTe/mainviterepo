@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 const Again = ()=>{
+   const  [i,seti] = useState();
     const [formdata,setformdata] = useState({
         hobbies:[], 
         subjects:[]     
@@ -13,6 +14,22 @@ const Again = ()=>{
             ...formdata,[name] : checked ? [...formdata[name],value] : formdata[name].filter((d,di)=>{return d !== value})
           }
         )
+    }
+    const add = ()=>{
+        setcolect([...colect,formdata])
+        setformdata({ hobbies:[], 
+        subjects:[] })
+    } 
+    const pre = (idx,itm,e)=>{
+         const {name,value,checked} = e.target;
+  
+         seti(idx);
+    
+          setformdata({
+    hobbies: itm.hobbies,
+    subjects: itm.subjects
+
+  })
     }
      return(
         <div>
@@ -37,7 +54,17 @@ const Again = ()=>{
          })}
         
       <hr />
-      
+      <button onClick={add}>ADD</button>
+      <br></br>
+      {colect.map((itm,idx)=>{
+           return(
+            <div key={idx}>
+                 <h1>{itm.hobbies + "  "   }</h1>
+                 <h1>{itm.subjects + " "}</h1>
+                 <button onClick={()=>pre(idx,itm)}>UPDATE</button>
+            </div>
+           )
+      })}
       <h1>{JSON.stringify(formdata, null, 2)}</h1>
          
 

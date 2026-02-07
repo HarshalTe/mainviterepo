@@ -18,6 +18,7 @@ import Full from './Pages/Full';
 import MultipleCheckboxFormik from './Pages/MultipleCheckboxFormik';
 import Again from './Pages/Again';
 import Cos2 from './Pages/Cos2'
+import File9 from './File9';
 
 
 
@@ -26,8 +27,9 @@ const Hmain = ()=>{
         <div>
               {/* <MultiArrayForm/>
               <Full/> */}
+              <File9/>
               {/* <Again/> */}
-              <Cos2/>
+              {/* <Cos2/> */}
               {/* <MultipleCheckboxFormik/> */}
             {/* <Newcrud/> */}
               {/* <Arrayexample/> */}

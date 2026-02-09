@@ -10,7 +10,7 @@ const MultiArrayForm = () => {
 
   const hobbiesList = ["Cricket", "Music", "Coding", "Travel"];
   const subjectsList = ["Maths", "Science", "English", "History"];
-
+  var a ;
   const handleChange = (e) => {
     const { name, value, checked, files, type } = e.target;
 

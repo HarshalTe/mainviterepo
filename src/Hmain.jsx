@@ -19,6 +19,9 @@ import MultipleCheckboxFormik from './Pages/MultipleCheckboxFormik';
 import Again from './Pages/Again';
 import Cos2 from './Pages/Cos2'
 import File9 from './File9';
+import Show111 from './Show';
+import Data from './CONTEXT/Data';
+
 
 
 
@@ -27,7 +30,7 @@ const Hmain = ()=>{
         <div>
               {/* <MultiArrayForm/>
               <Full/> */}
-              <File9/>
+              {/* <File9/> */}
               {/* <Again/> */}
               {/* <Cos2/> */}
               {/* <MultipleCheckboxFormik/> */}
@@ -44,6 +47,9 @@ const Hmain = ()=>{
             {/* <Array1/> */}
             {/* <ScrollExample/> */}
             {/* <AllInputComponent/> */}
+            <Show111/>
+            <Data/>
+          
 
         </div>
     )

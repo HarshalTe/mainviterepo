@@ -21,6 +21,7 @@ import Cos2 from './Pages/Cos2'
 import File9 from './File9';
 import Show111 from './Show';
 import Data from './CONTEXT/Data';
+import Re from './Re';
 
 
 
@@ -47,8 +48,9 @@ const Hmain = ()=>{
             {/* <Array1/> */}
             {/* <ScrollExample/> */}
             {/* <AllInputComponent/> */}
-            <Show111/>
-            <Data/>
+            {/* <Show111/>
+            <Data/> */}
+            <Re/>
           
 
         </div>

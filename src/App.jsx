@@ -8,6 +8,7 @@ import Tshirt from './Allproducts/Tshirt'
 import User1 from './Alluser/User1'
 import User2 from './Alluser/User2'
 import Notfound from './Pages/Notfound'
+import Valpass from './Perfotmance/Valpass'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
   return (
 
     <BrowserRouter>
+   
       <Routes>
         <Route path='/'   element={<Home />} />
         <Route path='/about' element={<About />} />

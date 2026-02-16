@@ -22,6 +22,8 @@ import File9 from './File9';
 import Show111 from './Show';
 import Data from './CONTEXT/Data';
 import Re from './Re';
+import Valpass from './Perfotmance/Valpass';
+import Revision from './Revision';
 
 
 
@@ -29,6 +31,7 @@ import Re from './Re';
 const Hmain = ()=>{
     return(
         <div>
+                     {/* <Valpass/> */}
               {/* <MultiArrayForm/>
               <Full/> */}
               {/* <File9/> */}
@@ -50,7 +53,9 @@ const Hmain = ()=>{
             {/* <AllInputComponent/> */}
             {/* <Show111/>
             <Data/> */}
-            <Re/>
+            {/* <Re/> */}
+            <Revision/>
+       
           
 
         </div>

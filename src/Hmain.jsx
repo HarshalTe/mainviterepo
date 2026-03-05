@@ -24,6 +24,12 @@ import Data from './CONTEXT/Data';
 import Re from './Re';
 import Valpass from './Perfotmance/Valpass';
 import Revision from './Revision';
+import Mycompont from './coustom&function&componat/Mycompont';
+import Showcomponant from './Resion/showcomponat';
+import App2 from './App2';
+import Funcomp from './Fun/Funcomp';
+import Getshow from './C/Getshow';
+import U from './U';
 
 
 
@@ -54,7 +60,13 @@ const Hmain = ()=>{
             {/* <Show111/>
             <Data/> */}
             {/* <Re/> */}
-            <Revision/>
+            {/* <Revision/> */}
+            {/* <Mycompont/> */}
+              {/* <Showcomponant/> */}
+              {/* <App2/> */}
+              {/* <Funcomp/> */}
+              {/* <Getshow/> */}
+              <U/>
        
           
 

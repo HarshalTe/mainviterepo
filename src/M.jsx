@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 const M = () => {
+    const [indexid,setindexid] = useState(null)
     const [formdata, setformdata] = useState(
         {
             first: "",
@@ -41,7 +42,45 @@ const M = () => {
         setlist((prev) => ([
             ...prev, formdata
         ]))
+        setformdata({
+              first: "",
+            last: "",
+            hobby: [],
+            skills: [],
+            doc1: [],
+            doc2: [],
+            clr:""   
+        })
     }
+    const prefield = (d, i)=>{
+        setformdata({
+             first: d.first,
+            last: d.last,
+            hobby:d.hobby,
+            skills:d.skills,
+            doc1: d.doc1,
+            doc2: d.doc2,
+            clr:d.clr    
+        })
+        setindexid(i)
+
+    }
+    const save = ()=>{
+        const updated = [...list]
+        updated[indexid] = formdata;
+        setlist(updated)
+         setindexid(null)
+         setformdata({
+              first: "",
+            last: "",
+            hobby: [],
+            skills: [],
+            doc1: [],
+            doc2: [],
+            clr:""   
+        })
+    }
+ 
     return (
 
         <div>
@@ -73,7 +112,6 @@ const M = () => {
             <br />
             <input type="file" multiple name="doc2" onChange={change} />
             <br></br>
-            <button onClick={add}>ADD</button>
             <br></br>
             <select  name="clr"   value={formdata.clr} onChange={change} >
                 <option>Select Color</option>
@@ -86,6 +124,9 @@ const M = () => {
                      )
                 })}
             </select>
+            <br/>
+            {indexid !== null?<button onClick={save}>SAVE</button> :<button onClick={add}>ADD</button>}
+            <br/>
             {list.map((d, i) => {
                 return (
                     <div key={i}>
@@ -128,6 +169,8 @@ const M = () => {
                         })}
                         <br></br>
                           <h1>{d.clr}</h1>
+                          <br/>
+                          <button onClick={()=>prefield(d, i)}>UPDATE</button>
 
                     </div>
                 )

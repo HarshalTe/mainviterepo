@@ -1,3 +1,5 @@
+import Usecompont from "./Costme/Usecompont";
+import { Usehoock } from "./Costme/Usehoock";
 import D2 from "./D2";
 import DynamicForm from "./DynamicForm";
 import M from "./M";
@@ -16,7 +18,8 @@ const Master = ()=>{
            {/* <Sringmethod/> */}
            {/* <DynamicForm/> */}
            {/* <D2/> */}
-           <Mult/>
+           {/* <Mult/> */}
+             <Usecompont/>
 
         </div>
      );

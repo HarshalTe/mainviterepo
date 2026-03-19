@@ -14,7 +14,7 @@ const Mult = () => {
   };
 
   const add = () => {
-    setlist(prev => [...prev, prev.length + 1]);
+    setlist(prev => [...prev, prev]);
   };
 
   const showdata = () => {

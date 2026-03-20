@@ -8,7 +8,9 @@
 // import Multrev from "./Multrev";
 
 import It from "./It";
+import Crud from "./R1/Crud";
 import Start from "./Start";
+import Str from "./Str";
 
 // import Sringmethod from "./Sringmethod";
 // import Storage from "./Storage";
@@ -29,7 +31,9 @@ const Master = ()=>{
              {/* <Set2/>
              <Set3/> */}
              {/* <It/> */}
-             <Start/>
+             {/* <Start/> */}
+             {/* <Str/> */}
+             <Crud/>
     
 
         </div>

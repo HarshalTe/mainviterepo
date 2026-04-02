@@ -1,0 +1,48 @@
+
+
+
+
+
+
+
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Harshal",
+      "email": "harshal@gmail.com",
+      "role": "Admin"
+    },
+    {
+      "id": "2",
+      "name": "Rahul",
+      "email": "rahul@gmail.com",
+      "role": "User"
+    },
+    {
+      "name": "adfasdfdasf",
+      "email": "asdfasfdsafdf",
+      "id": "7Dizq15SDdA"
+    },
+    {
+      "name": "s",
+      "email": "s",
+      "role": "s",
+      "id": "T9GGqw57LQ0"
+    },
+    {
+      "name": "asdasdsad",
+      "email": "asdasdas",
+      "role": "asdsad",
+      "id": "zNT3Zb5E8vs"
+    },
+    {
+      "name": "qqq",
+      "email": "qq",
+      "role": "qq",
+      "id": "M_QqYgdU8XA"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
+

@@ -7,7 +7,10 @@
 // import Mult from "./Mult";
 // import Multrev from "./Multrev";
 
+import Am from "./Am";
+import Api from "./Api";
 import It from "./It";
+import Master2 from "./Master2";
 import Crud from "./R1/Crud";
 import Start from "./Start";
 import Str from "./Str";
@@ -33,7 +36,10 @@ const Master = ()=>{
              {/* <It/> */}
              {/* <Start/> */}
              {/* <Str/> */}
-             <Crud/>
+             {/* <Crud/> */}
+             {/* <Am/> */}
+             {/* <Master2/> */}
+             <Api/>
     
 
         </div>

@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "firstname": "harshal",
+      "lastname": "terekar",
+      "hobbies": [
+        "1",
+        "2"
+      ],
+      "subject": [
+        "3",
+        "4"
+      ],
+      "doc1": [
+        "5",
+        "6"
+      ],
+      "doc2": [
+        "7",
+        "8"
+      ]
+    },
+    {
+      "firstname": "wrtrwe",
+      "lastname": "wertwe",
+      "hobbies": [
+        "coding",
+        "creativity"
+      ],
+      "subject": [
+        "drawing",
+        "painting"
+      ],
+      "doc1": [
+        "consinee name phone.png",
+        "dasbord-2.png"
+      ],
+      "doc2": [
+        "dasbord-3.png"
+      ],
+      "id": "x2MeqUa4zCY"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

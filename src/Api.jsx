@@ -11,6 +11,8 @@ const Api = () => {
         doc2: [],
 
     })
+    const empty = {...formdata};
+    const [index,setindex] = useState(null);
     const [list, setlist] = useState([])
     const handlechange = (e) => {
         const { name, value, checked, type, files } = e.target;
@@ -21,11 +23,8 @@ const Api = () => {
             setformdata((pre) => ({ ...pre, [name]: checked ? [...pre[name], value] : pre[name].filter((d,fi) => { return d !== value }) }))
         }
         if (type === "file") {
-            // setformdata((prev) = ({ [name]: Array.from(files) }))
-                setformdata(prev => ({
-            ...prev,
-            [name]: Array.from(files).map(f => f.name)
-        }));
+            setformdata((prev) = ({ [name]: Array.from(files) }))
+     
         }
     }
     const fetchuser = async () => {
@@ -48,10 +47,54 @@ const Api = () => {
             })
             const data = await res.json()
             setlist([...list, data])
-
+          
         }
         catch (err) {
             console.log(err)
+        }
+    }
+    const prefield = (d) =>{
+        setindex(d.id)
+        setformdata(d)
+    }
+    const save = async()=>{
+        try{
+               const res = await fetch(`${Url}/${index}`,{
+                 method:"PUT",
+                 headers:{"Content-Type":"application/json"},
+                 body:JSON.stringify(formdata)
+               })
+               const data = await res.json();
+               const updated = list.map((d)=>
+                    d.id === index ? data : d
+               )
+
+               setlist(updated)
+               setindex(null)
+        }
+        catch(err)
+        {
+           console.log(err)
+        }
+    }
+    const del = async(i)=>{
+        setindex(i)
+        try
+        {
+               await fetch(`${Url}/${i}`,{
+                    method:"DELETE",
+                    headers:{"Content-Type":"application/json"}
+                })
+                
+                const deleted = list.filter((d)=>{
+                    return i !== d.id;
+                })
+                setlist(deleted)
+                     
+        }
+        catch(err)
+        {
+              console.log(err)
         }
     }
     return (
@@ -82,38 +125,35 @@ const Api = () => {
             <br />
             <input type="file" multiple name="doc2" onChange={handlechange} />
             <br />
-            <button onClick={add}>ADD</button>
+           {index !== null ?<button onClick={save}>SAVE</button> :<button onClick={add}>ADD</button>}
             <br />
             <br />
             {
                 list.map((d)=>{
                    return(
                       <div key={d.id}>
-                           <h1>{d.firstname}</h1>
+                           <b>{`${d.firstname}  ${d.lastname}`}</b>
                            <br/>
-                           <h1>{d.lastname}</h1>
-                           <br/>
-                           {d.hobbies.map((d2,d2i)=>{
+                           {(d.hobbies || []).map((d2,d2i)=>{
                                 return(
                                     <div key={d2i}>
-                                        <h1>{d2}</h1>
+                                        <label>{d2}</label>
                                     </div>
                                 )
                            })}
-                           <br/>
-                           {d.subject.map((d3,d3i)=>{
+                           {(d.subject || []).map((d3,d3i)=>{
                                return(
                                    <div key={d3i}>
-                                        <h1>{d3}</h1>
+                                        <label>{d3}</label>
                                    </div>
                                )
                            })}
                            <br></br>
                            {
-                            d.doc1.map((d4,d4i)=>{
+                            (d.doc1 || []).map((d4,d4i)=>{
                                    return(
                                     <div key={d4i}>
-                                         <h1>{d4}</h1> 
+                                         <label>{d4}</label> 
                                     </div>
                                    )
                             })
@@ -121,15 +161,17 @@ const Api = () => {
                            <br/>
                              <br></br>
                            {
-                            d.doc2.map((d5,d5i)=>{
+                            (d.doc2 || []).map((d5,d5i)=>{
                                    return(
                                     <div key={d5i}>
-                                         <h1>{d5}</h1> 
+                                         <label>{d5}</label> 
                                     </div>
                                    )
                             })
                            }
-
+                           <br/>
+                           <button onClick={()=>prefield(d)}>UPDATE</button>
+                           <button onClick={()=>del(d.id)}>DELETE</button>
                       </div>
                    ) 
                 })

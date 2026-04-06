@@ -9,8 +9,10 @@
 
 import Am from "./Am";
 import Api from "./Api";
+import Api2 from "./Api2";
 import It from "./It";
 import Master2 from "./Master2";
+import Prack from "./Prack";
 import Crud from "./R1/Crud";
 import Start from "./Start";
 import Str from "./Str";
@@ -39,7 +41,9 @@ const Master = ()=>{
              {/* <Crud/> */}
              {/* <Am/> */}
              {/* <Master2/> */}
+             {/* <Prack/> */}
              <Api/>
+             <Api2/>
     
 
         </div>

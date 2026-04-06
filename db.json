@@ -1,45 +1,29 @@
 {
   "users": [
     {
-      "id": "1",
-      "firstname": "harshal",
-      "lastname": "terekar",
-      "hobbies": [
-        "1",
-        "2"
-      ],
-      "subject": [
-        "3",
-        "4"
-      ],
-      "doc1": [
-        "5",
-        "6"
-      ],
-      "doc2": [
-        "7",
-        "8"
-      ]
+      "d1": "fg",
+      "d2": "sdfg",
+      "d3": "dfg",
+      "d4": "sdfg",
+      "d5": "sdfg",
+      "d6": "dfg",
+      "d7": "sdfg",      
+      "id": "Pyxwxm46tWg"
     },
     {
-      "firstname": "wrtrwe",
-      "lastname": "wertwe",
+      "firstname": "sdf",
+      "lastname": "sdfgg",
       "hobbies": [
         "coding",
         "creativity"
       ],
       "subject": [
-        "drawing",
-        "painting"
+        "painting",
+        "computer-science"
       ],
-      "doc1": [
-        "consinee name phone.png",
-        "dasbord-2.png"
-      ],
-      "doc2": [
-        "dasbord-3.png"
-      ],
-      "id": "x2MeqUa4zCY"
+      "doc1": [],
+      "doc2": [],
+      "id": "zt5lPQkQKWs"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
